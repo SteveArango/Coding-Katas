@@ -2,13 +2,18 @@ import { describe, it, expect } from 'vitest';
 import { fizzBuzz, getFizzBuzzSequence } from './fizzBuzz';
 
 describe('FizzBuzz Sequence', () => {
-    it('generates correct sequence of 100 numbers with FizzBuzz rules', () => {
+    it('generates sequence until finding FizzBuzzWhizzBang', () => {
         const sequence = getFizzBuzzSequence();
+
+        expect(sequence[2]).toBe("Fizz");  
+        expect(sequence[4]).toBe("Buzz");     
+        expect(sequence[6]).toBe("Whizz");    
+        expect(sequence[10]).toBe("Bang");    
         
-        expect(sequence.length).toBe(100);
-        expect(sequence[2]).toBe("Fizz");  // 3rd number
-        expect(sequence[4]).toBe("Buzz");  // 5th number
-        expect(sequence[14]).toBe("FizzBuzz");  // 15th number
-        expect(sequence[0]).toBe(1);  // 1st number
+        expect(sequence[14]).toBe("FizzBuzz"); 
+        expect(sequence[20]).toBe("FizzWhizz"); 
+        
+        const lastValue = sequence[sequence.length - 1];
+        expect(lastValue).toBe("FizzBuzzWhizzBang");
     });
 });
