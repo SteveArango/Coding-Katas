@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ts-node fizzBuzz/fizzBuzz.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "ts-basic": "ts-node tsBasics/primitives.ts"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
