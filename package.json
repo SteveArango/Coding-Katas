@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ts-node fizzBuzz/fizzBuzz.ts",
-    "test": "vitest",
+    "test": "vitest --run",
+    "test-leapyears": "vitest run leapYears/leapYears.test.ts",
     "ts-basic": "ts-node tsBasics/primitives.ts",
-    "ts-functions": "ts-node tsBasics/functions.ts"
+    "ts-functions": "ts-node tsBasics/functions.ts",
+    "ts-leapyears": "ts-node tsBasics/leapyears.ts"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
