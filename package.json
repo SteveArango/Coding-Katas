@@ -4,7 +4,8 @@
   "scripts": {
     "start": "ts-node fizzBuzz/fizzBuzz.ts",
     "test": "vitest",
-    "ts-basic": "ts-node tsBasics/primitives.ts"
+    "ts-basic": "ts-node tsBasics/primitives.ts",
+    "ts-functions": "ts-node tsBasics/functions.ts"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
