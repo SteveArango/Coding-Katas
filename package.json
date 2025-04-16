@@ -7,7 +7,8 @@
     "test-leapyears": "vitest run leapYears/leapYears.test.ts",
     "ts-basic": "ts-node tsBasics/primitives.ts",
     "ts-functions": "ts-node tsBasics/functions.ts",
-    "ts-leapyears": "ts-node tsBasics/leapyears.ts"
+    "ts-leapyears": "ts-node tsBasics/leapyears.ts",
+    "ts-arraySum": "ts-node tsBasics/arraySum.ts"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
