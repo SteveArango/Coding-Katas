@@ -56,16 +56,21 @@ console.log(heroeMessage)
 
 //.map() Method Examples
 
-
 const numbers = [3, 6, 9]
-
 const numbersMultiplied = numbers.map((numbers: number) => numbers * 3);
-
 console.log(numbersMultiplied)
 
-
 const list = [2,4,6,8,10]
-
-const addTwoToList = list.map((list: number) => list + 2);
-
+const addTwoToList = list.map((list: number) => {list + 2});
 console.log(addTwoToList)
+
+// .filter(method)
+
+const str = 'Hello';
+
+const chars = str.split("")
+
+const filtering = chars.filter((char) => 'AEIOUaeiou'.includes(char));
+
+console.log(chars);
+console.log(filtering);
