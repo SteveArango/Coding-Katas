@@ -27,7 +27,7 @@ describe('Count Vowels Kata', () => {
         //Assert
         expect(result).toBe(1)
     });
-    it('returns the correct count for strings with multiple vowels ', () => {
+    it('returns the correct count for strings with multiple vowels', () => {
         //Arrange
         const multipleVowels = 'Multiple Vowels'
         //Act
