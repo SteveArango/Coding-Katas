@@ -14,7 +14,7 @@ const loginUser = (name: string = 'Guest', email: string): string => {
 
 function getValue(myVal: number): number | string {
     if (myVal === 0) {
-        return 'Steve is a warrior';
+        return 'Steve is an Automation QA Engineer';
     }
     return myVal;
 }
