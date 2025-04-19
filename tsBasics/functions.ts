@@ -83,7 +83,18 @@ const vowelsInInputMesh = inputMessage.split('').filter((char) => 'AEIOUaeiou'.i
 
 // console.log(vowelsInInputMesh)
 
-const consonantsInMessage = inputMessage.split('').filter((char) => !'AEIOUaeiou'.includes(char) && char.trim() !== '');
+const isNotVowel = (char: string): boolean => {
+    return !'AEIOUaeiou'.includes(char);
+}
+
+const isNotWhitespace = (char: string): boolean => {
+    return char.trim() !== '';
+}
+
+const consonantsInMessage = inputMessage
+    .split('')
+    .filter(char => isNotVowel(char))
+    .filter(char => isNotWhitespace(char));
 
 console.log(consonantsInMessage);
 
