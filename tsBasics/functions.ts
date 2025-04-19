@@ -1,108 +1,56 @@
-// Function to add 2 to any number
-
+// Basic Function Examples
 function addTwo(num: number): number {
     return num + 2;
 }
-addTwo(7);
 
-//String function to convert any string to upper
-
-function convertUpper(str: string){
+function convertUpper(str: string): string {
     return str.toUpperCase();
 }
-//console.log(convertUpper("a string"));
 
-// function signUpUser(name: string, email: string, isPaid: boolean) {
-//     console.log(`User name: ${name}`),
-//     console.log(`User email: ${email}`),
-//     console.log(`User paid: ${isPaid}`)
-
-//     return `User ${name} has been successfully signed up`
-// }
-
-// let signUpMessage = signUpUser("Steve", "steve@test.com", true)
-// console.log(signUpMessage)
-
-//Arrow functions
-
-let loginUser = (name: string = 'Guest', email: string) => {
+// Arrow Function Examples
+const loginUser = (name: string = 'Guest', email: string): string => {
     return `User ${name} has logged in with email ${email}`;
 }
 
-// console.log(loginUser('Steve', 'test'))
-// console.log(loginUser(undefined, 'test@test.com'))
-
-    function getValue(myVal: number): number | string {
+function getValue(myVal: number): number | string {
     if (myVal === 0) {
-        return 'Steve is a warrior'
+        return 'Steve is a warrior';
     }
-    return myVal
+    return myVal;
 }
 
-const value = getValue(7)
-// console.log(`This is my value: ${value}`)
+const arrowFunction = (num: number): number => num;
 
-const arrowFunction = (number: number): number => {return number}
+// Array Method Examples
 
-const triple = arrowFunction(777)
+// 1. Map Examples
+const heroes = ['Don Juan', 'Genaro', 'Pablo', 'Nawal', 'Dante'];
+const heroeMessages = heroes.map((hero: string) => `${hero} is awesome`);
 
-// console.log(triple)
+const numbers = [3, 6, 9];
+const numbersMultiplied = numbers.map((num: number) => num * 3);
 
-const heroes = ['Don Juan', 'Genaro', 'Pablo', 'Nawal', 'Dante']
+const list = [2, 4, 6, 8, 10];
+const listPlusTwo = list.map((num: number) => num + 2);
 
-const heroeMessage = heroes.map((hero: string) => hero + ' is awesome');
+// 2. String and Filter Examples
+const inputMessage = 'Steve is a real Software Quality Assurance Automation Engineer';
 
-// console.log(heroeMessage)
+// Vowel detection helper functions
+const isVowel = (char: string): boolean => 'AEIOUaeiou'.includes(char);
+const isNotWhitespace = (char: string): boolean => char.trim() !== '';
 
-//.map() Method Examples
-
-const numbers = [3, 6, 9]
-const numbersMultiplied = numbers.map((numbers: number) => numbers * 3);
-// console.log(numbersMultiplied)
-
-const list = [2,4,6,8,10]
-const addTwoToList = list.map((list: number) => {list + 2});
-// console.log(addTwoToList)
-
-// .filter(method)
-
-const str = 'Hello';
-
-const chars = str.split("")
-
-const filtering = chars.filter((char) => 'AEIOUaeiou'.includes(char));
-
-// console.log(chars);
-// console.log(filtering);
-
-//Understanding .filter() .includes() y .test()
-
-const inputMessage = 'Steve is a real Software Quality Assurance Automation Engineer'
-
-const vowelsInInputMesh = inputMessage.split('').filter((char) => 'AEIOUaeiou'.includes(char));
-
-// console.log(vowelsInInputMesh)
-
-const isNotVowel = (char: string): boolean => {
-    return !'AEIOUaeiou'.includes(char);
-}
-
-const isNotWhitespace = (char: string): boolean => {
-    return char.trim() !== '';
-}
-
-const consonantsInMessage = inputMessage
+// Find vowels and consonants
+const vowels = inputMessage
     .split('')
-    .filter(char => isNotVowel(char))
-    .filter(char => isNotWhitespace(char));
+    .filter(isVowel);
 
-console.log(consonantsInMessage);
+const consonants = inputMessage
+    .split('')
+    .filter(char => !isVowel(char))
+    .filter(isNotWhitespace);
 
-//console.log(splittedString)
-
-// const splittedString = string.split(' '); // Splits by spaces
-// const splittedByComma = string.split(','); // Splits by commas
-// const splittedByDash = string.split('-'); // Splits by dashes
-// const splittedByCustom = string.split(/[\s,.-]/); // Splits by spaces, commas, or dashes using regex
+// Example Usage
+console.log('Consonants:', consonants);
 
 
