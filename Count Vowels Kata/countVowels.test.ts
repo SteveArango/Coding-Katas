@@ -1,6 +1,5 @@
-import {describe, it, expect} from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { countVowels } from './countVowels';
-import { rmSync } from 'fs';
 
 describe('Count Vowels Kata', () => {
     it('returns 0 for empty strings', () => {

@@ -8,7 +8,8 @@
     "ts-basic": "ts-node tsBasics/primitives.ts",
     "ts-functions": "ts-node tsBasics/functions.ts",
     "ts-leapyears": "ts-node tsBasics/leapyears.ts",
-    "ts-arraySum": "ts-node tsBasics/arraySum.ts"
+    "ts-arraySum": "ts-node tsBasics/arraySum.ts",
+    "ts-primitives": "ts-node tsBasics/primitives.ts"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
