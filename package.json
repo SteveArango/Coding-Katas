@@ -7,9 +7,11 @@
     "test-leapyears": "vitest run leapYears/leapYears.test.ts",
     "ts-basic": "ts-node tsBasics/primitives.ts",
     "ts-functions": "ts-node tsBasics/functions.ts",
-    "ts-leapyears": "ts-node tsBasics/leapyears.ts",
-    "ts-arraySum": "ts-node tsBasics/arraySum.ts",
-    "ts-primitives": "ts-node tsBasics/primitives.ts"
+    "ts-leapyears": "ts-node leapYears/leapYears.ts",
+    "ts-arraySum": "ts-node Array\\ Sum/arraySum.ts",
+    "ts-primitives": "ts-node tsBasics/primitives.ts",
+    "ts-arraysAndObjects": "ts-node tsBasics/arraysAndObjects.ts",
+    "ts-findMax": "ts-node Max\\ Number/findMaxNumber.ts"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

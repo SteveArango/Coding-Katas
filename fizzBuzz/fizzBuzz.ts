@@ -65,7 +65,5 @@ export function getFizzBuzzSequence(): (string | number)[] {
         }
         i++;
     }
-    
-    console.log(result);
     return result;
 }
