@@ -39,7 +39,7 @@ console.log('Bands:', bands);
 // Fixed-length arrays with predefined types in specific positions
 
 // Basic tuple example
-let myFirstTuple: [string, number] = ['Genaro', 77];
+let myFirstTuple: [name: string, age: number] = ['Genaro', 77];
 
 // Destructuring a tuple
 let [personName, age] = myFirstTuple;
@@ -65,13 +65,13 @@ type Person = {
 };
 
 // Creating an object with the Person type
-const person: Person = {
+const individual: Person = {
     name: 'John',
     age: 30,
     active: true
 };
 
-console.log('Person object:', person);
+console.log('Person object:', individual);
 
 // Object with optional properties
 interface Product {
@@ -92,6 +92,7 @@ interface Address {
     street: string;
     city: string;
     zipCode: string;
+    country: string;
 }
 
 interface Employee {
@@ -100,14 +101,62 @@ interface Employee {
     address: Address;
 }
 
-const employee: Employee = {
+const staffMember: Employee = {
     id: 101,
     name: 'Alice',
     address: {
         street: '123 Main St',
         city: 'Techville',
-        zipCode: '12345'
+        zipCode: '12345',
+        country: 'USA'
     }
 };
 
-console.log('Employee with nested address:', employee);
+console.log('Employee with nested address:', staffMember);
+
+// ARRAY OF OBJECTS
+console.log('\n--- ARRAY OF OBJECTS ---');
+
+// [{}] is an array containing one empty object
+let singleEmptyObject: object[] = [{}];
+console.log('Array with single empty object:', singleEmptyObject);
+console.log('Type:', typeof singleEmptyObject); // 'object' (arrays are objects in JavaScript)
+console.log('Is Array?', Array.isArray(singleEmptyObject)); // true
+
+// Array of multiple objects
+let people: { name: string, age: number }[] = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 30 },
+    { name: 'Charlie', age: 35 }
+];
+
+console.log('Array of people objects:', people);
+console.log('First person:', people[0]);
+console.log('Second person name:', people[1].name);
+
+// Empty array of objects - ready to be filled
+let emptyPeopleArray: object[] = [];
+console.log('Empty array (ready for objects):', emptyPeopleArray);
+
+// Adding objects to the empty array
+emptyPeopleArray.push({ id: 1, role: 'admin' });
+emptyPeopleArray.push({ id: 2, role: 'user' });
+console.log('After adding objects:', emptyPeopleArray);
+
+// Array of objects with different shapes (using union type)
+let mixedObjectsArray: ({ id: number, name: string } | { productId: string, price: number })[] = [
+    { id: 1, name: 'User' },
+    { productId: 'P100', price: 29.99 }
+];
+
+console.log('Array with different object types:', mixedObjectsArray);
+
+// Practical example: JSON data often comes as arrays of objects
+const jsonExample = `[
+    {"id": 1, "task": "Learn TypeScript", "completed": false},
+    {"id": 2, "task": "Build a project", "completed": true}
+]`;
+
+const todoItems = JSON.parse(jsonExample);
+console.log('Parsed JSON (array of objects):', todoItems);
+console.log('First todo task:', todoItems[0].task);

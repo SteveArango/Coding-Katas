@@ -11,7 +11,8 @@
     "ts-arraySum": "ts-node Array\\ Sum/arraySum.ts",
     "ts-primitives": "ts-node tsBasics/primitives.ts",
     "ts-arraysAndObjects": "ts-node tsBasics/arraysAndObjects.ts",
-    "ts-findMax": "ts-node Max\\ Number/findMaxNumber.ts"
+    "ts-findMax": "ts-node Max\\ Number/findMaxNumber.ts",
+    "ts-objectsIntro": "ts-node tsBasics/objectsIntro.ts"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
